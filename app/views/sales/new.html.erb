@@ -1,21 +1,27 @@
+<div class="col-md-3 ">
+<form>
 <%= form_with(model: @sale, local: true) do |f|%>
 <%= f.label :cod %>
-<%= f.text_field :cod %>
+<%= f.text_field :cod, :class => 'form-control', :placeholder => 'Codigo'%>
 
 <%= f.label :detail %>
-<%= f.text_area :detail %>
+<%= f.text_area :detail, :class => 'form-control', :placeholder => 'Detalles'%>
 
 <%= f.label :category %>
-<%= f.text_field :category %>
+<%= f.text_field :category, :class => 'form-control', :placeholder => 'Categoria'%>
 
 <%= f.label :value %>
-<%= f.text_field :value %>
+<%= f.text_field :value, :class => 'form-control', :placeholder => 'Valor'%>
 
 <%= f.label :discount %>
-<%= f.text_field :discount %>
+<%= f.text_field :discount, :class => 'form-control', :placeholder => 'Descuento' %>
 
 <%= f.label :'Exento de IVA' %>
-<%= f.check_box :tax %>
-
-<%= f.submit :crear %>
+<%= f.check_box :tax , :class => 'form-check-label'%>
+<br>
+<%= f.submit :crear, :class => 'btn btn-primary' %>
 <% end %>
+
+</form>
+</div>
+
